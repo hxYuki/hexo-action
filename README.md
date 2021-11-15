@@ -1,6 +1,6 @@
 # GitHub Action - Hexo CI/CD 🌱
 
-<a href="https://github.com/marketplace/actions/hexo-action"><img alt="View Action" src="https://img.shields.io/badge/action-marketplace-blue.svg?logo=github&color=orange"></a>
+<!-- <a href="https://github.com/marketplace/actions/hexo-action"><img alt="View Action" src="https://img.shields.io/badge/action-marketplace-blue.svg?logo=github&color=orange"></a> -->
 <a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg?logo=github"></a>
 
 This Github Action automating hexo deployment workflow, to allow you to leverage GitHub Actions to publish your hexo site on Github Pages.
@@ -30,6 +30,7 @@ For more information on these inputs, see the [API Documentation](https://develo
 | `user_email` | NO | The user email of your github account for deploying. | `41898282+github-actions[bot]@users.noreply.github.com`[<sup>1</sup>](#refer-anchor-1) |
 | `deploy_key` | **YES** | The **deploy key** to access your **GitHub Pages repository**. | `null` |
 | `commit_msg` | NO | Git commit messages for your GitHub Pages repository. | `null` |
+| `use_algolia` | NO | Use algolia search in your blog | `false` |
 
 <div id="refer-anchor-1"></div>
 
@@ -84,6 +85,7 @@ jobs:
         user_name: your github username  # (or delete this input setting to use bot account)
         user_email: your github useremail  # (or delete this input setting to use bot account)
         commit_msg: ${{ github.event.head_commit.message }}  # (or delete this input setting to use hexo default settings)
+        use_algolia: false # (make sure your _config.yml is configured properly)
     # Use the output from the `deploy` step(use for test action)
     - name: Get the output
       run: |

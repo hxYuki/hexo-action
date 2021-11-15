@@ -18,12 +18,12 @@ npm install hexo-deployer-git --save
 
 hexo_params="g -d"
 # algolia
-if [ "$USE_ALGOLIA" = true ]
+if [ "$INPUT_USE_ALGOLIA" = true ]
 then
     hexo_params="d"
     hexo a
 fi
-echo "USE_ALGOLIA is \`${USE_ALGOLIA}\`"
+echo "USE_ALGOLIA is \`${INPUT_USE_ALGOLIA}\`"
 echo "runing \"hexo ${hexo_params}\""
 # deployment
 if [ "$INPUT_COMMIT_MSG" = "none" ]

@@ -23,7 +23,8 @@ then
     hexo_params="d"
     hexo a
 fi
-
+echo "USE_ALGOLIA is \`${USE_ALGOLIA}\`"
+echo "runing \"hexo ${hexo_params}\""
 # deployment
 if [ "$INPUT_COMMIT_MSG" = "none" ]
 then

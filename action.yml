@@ -33,7 +33,7 @@ runs:
     - ${{ inputs.user_email }}
     - ${{ inputs.deploy_key }}
     - ${{ inputs.commit_msg }}
-    - ${{ inputes.use_algolia }}
+    - ${{ inputs.use_algolia }}
 branding:
   icon: 'package'  
   color: 'blue'

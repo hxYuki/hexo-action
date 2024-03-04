@@ -1,6 +1,6 @@
-FROM node:12-buster-slim
+FROM node:20-buster-slim
 
-LABEL version="1.0.3"
+LABEL version="2.0.0"
 LABEL repository="https://github.com/sma11black/hexo-action"
 LABEL homepage="https://sma11black.github.io"
 LABEL maintainer="sma11black <smallblack@outlook.com>"
